@@ -9,6 +9,14 @@ class News extends StatefulWidget {
 
 class _NewsState extends State<News> {
   int tabIndex = 0;
+  int selectedIndex = 0;
+
+  void callApi(int index) {
+    setState(() {
+      tabIndex = index;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -27,11 +35,12 @@ class _NewsState extends State<News> {
             padding: EdgeInsets.zero,
             indicatorColor: Colors.black,
             labelColor: Colors.black,
-            unselectedLabelColor: Colors.grey,
             enableFeedback: true,
             isScrollable: true,
-            indicatorPadding: EdgeInsets.zero,
             indicatorWeight: 4,
+            tabAlignment: TabAlignment.start,
+            physics:
+                AlwaysScrollableScrollPhysics(parent: BouncingScrollPhysics()),
             tabs: const [
               Tab(text: "General"),
               Tab(text: "Health"),
