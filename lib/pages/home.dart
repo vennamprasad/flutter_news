@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_news/pages/News.dart';
+import 'package:flutter_news/pages/news.dart';
 import 'package:flutter_news/pages/favorites.dart';
 import 'package:flutter_news/pages/settings.dart';
 
